@@ -1,0 +1,129 @@
+[
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "j k": ["vim::SwitchMode", "Normal"]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "space w": "workspace::Save",
+
+      "ctrl-q": "pane::CloseActiveItem",
+      "space q q": "workspace::CloseWindow",
+
+      "shift-k": "editor::Hover",
+
+      "shift-l": "pane::ActivateNextItem",
+      "shift-h": "pane::ActivatePrevItem",
+
+      "g d": "editor::GoToDefinition",
+      "space D": "editor::GoToTypeDefinition",
+      "g r": "editor::FindAllReferences",
+      "g I": "editor::GoToImplementation",
+
+      "ctrl-t": "workspace::ToggleBottomDock",
+      "space g b": "editor::ToggleGitBlame",
+
+      "space |": "pane::SplitRight",
+
+      "space h": "pane::SplitDown",
+
+      "space /": "editor::ToggleComments",
+
+      "space c a": "editor::ToggleCodeActions",
+
+      "space f": "editor::Format",
+
+      "space r": "editor::Rename",
+
+      "space d": "diagnostics::Deploy",
+
+      "space s f": "file_finder::Toggle",
+
+      "space o": "outline::Toggle",
+      "space s g": "pane::DeploySearch",
+      "space b u": ["pane::CloseInactiveItems", { "close_pinned": false }],
+      "space b a": ["pane::CloseAllItems", { "close_pinned": false }],
+
+      "space g e": "editor::OpenExcerpts"
+    }
+  },
+  {
+    "context": "Editor && !ProjectPanel",
+
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+
+    "bindings": {
+      "space e": ["workspace::SendKeystrokes", "cmd-b"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"]
+    }
+  },
+  {
+    // Vim: File Tree ("ProjectPanel") actions
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "h": "project_panel::CollapseSelectedEntry",
+      "l": "project_panel::ExpandSelectedEntry",
+      "j": "menu::SelectNext",
+      "k": "menu::SelectPrev",
+      "o": "menu::Confirm",
+      "r": "project_panel::Rename",
+      "z c": "project_panel::CollapseSelectedEntry",
+      "z o": "project_panel::ExpandSelectedEntry",
+      "shift-o": "project_panel::RevealInFinder",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "d": "project_panel::Delete",
+      "a": "project_panel::NewFile",
+      "shift-a": "project_panel::NewDirectory",
+      "shift-y": "project_panel::CopyRelativePath",
+      "g y": "project_panel::CopyPath",
+      "/": "file_finder::Toggle",
+      "ctrl-t": "workspace::ToggleBottomDock",
+      "ctrl-d": [
+        "workspace::SendKeystrokes",
+        "j j j j j j j j j j j j j j j j j"
+      ],
+      "ctrl-u": [
+        "workspace::SendKeystrokes",
+        "k k k k k k k k k k k k k k k k k"
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-1": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "ProjectSearchBar && vim_mode == normal && !menu",
+    "bindings": {
+      "space s g": "search::FocusSearch"
+    }
+  },
+  {
+    "context": "Terminal",
+
+    "bindings": {
+      "ctrl-t": "workspace::ToggleBottomDock",
+      "ctrl-h": "pane::ActivatePrevItem",
+      "ctrl-l": "pane::ActivateNextItem"
+    }
+  }
+]

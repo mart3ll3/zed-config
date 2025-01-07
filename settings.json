@@ -1,0 +1,51 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "assistant": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:32b-instruct-q3_K_M",
+      "max_tokens": 4096,
+      "low_speed_timeout_in_seconds": 240
+    },
+    "version": "2"
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://localhost:11434",
+      "low_speed_timeout_in_seconds": 120,
+      "available_models": [
+        {
+          "name": "qwen2.5",
+          "display_name": "qwen 2.5 coder 8K",
+          "max_tokens": 8192
+        }
+      ]
+    }
+  },
+  "theme": "Dracula",
+  "base_keymap": "JetBrains",
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "buffer_line_height": {
+    "custom": 1.4
+  },
+  "ui_font_size": 18,
+  "buffer_font_size": 16,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "format_on_save": "on",
+  "formatter": "prettier",
+  "project_panel": {
+    // "indent_size": 11,
+    "auto_fold_dirs": false
+  },
+  "vim": {
+    "use_system_clipboard": "never"
+  }
+}
