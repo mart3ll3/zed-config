@@ -16,7 +16,9 @@
       "shift-k": "editor::Hover",
 
       "shift-l": "pane::ActivateNextItem",
+      "shift-right": "pane::ActivateNextItem",
       "shift-h": "pane::ActivatePrevItem",
+      "shift-left": "pane::ActivatePrevItem",
 
       "g d": "editor::GoToDefinition",
       "space D": "editor::GoToTypeDefinition",
@@ -62,7 +64,8 @@
 
     "bindings": {
       "space e": ["workspace::SendKeystrokes", "cmd-b"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"]
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-right": ["workspace::ActivatePaneInDirection", "Right"]
     }
   },
   {
@@ -102,7 +105,9 @@
     "context": "Editor",
     "bindings": {
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"]
+      "ctrl-left": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-right": ["workspace::ActivatePaneInDirection", "Right"]
     }
   },
   {
@@ -123,7 +128,9 @@
     "bindings": {
       "ctrl-t": "workspace::ToggleBottomDock",
       "ctrl-h": "pane::ActivatePrevItem",
-      "ctrl-l": "pane::ActivateNextItem"
+      "ctrl-left": "pane::ActivatePrevItem",
+      "ctrl-l": "pane::ActivateNextItem",
+      "ctrl-right": "pane::ActivateNextItem"
     }
   }
 ]
