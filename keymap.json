@@ -65,7 +65,9 @@
     "bindings": {
       "space e": ["workspace::SendKeystrokes", "cmd-b"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-right": ["workspace::ActivatePaneInDirection", "Right"]
+      "ctrl-right": ["workspace::ActivatePaneInDirection", "Right"],
+      "shift-right": ["workspace::ActivatePaneInDirection", "Right"],
+      "shift-left": ["workspace::ActivatePaneInDirection", "Right"]
     }
   },
   {
