@@ -45,6 +45,7 @@
       "space d": "diagnostics::Deploy",
 
       "space s f": "file_finder::Toggle",
+      "space s o": "workspace::Open",
 
       "space o": "outline::Toggle",
       "space s g": "pane::DeploySearch",
