@@ -8,6 +8,8 @@
   {
     "context": "Editor && vim_mode == normal && !menu",
     "bindings": {
+      "s": ["vim::PushOperator", { "Sneak": {} }],
+      "S": ["vim::PushOperator", { "SneakBackward": {} }],
       "space w": "workspace::Save",
 
       "ctrl-q": "pane::CloseActiveItem",
@@ -82,7 +84,6 @@
       "r": "project_panel::Rename",
       "z c": "project_panel::CollapseSelectedEntry",
       "z o": "project_panel::ExpandSelectedEntry",
-      "shift-o": "project_panel::RevealInFinder",
       "x": "project_panel::Cut",
       "c": "project_panel::Copy",
       "p": "project_panel::Paste",
