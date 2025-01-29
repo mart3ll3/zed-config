@@ -58,7 +58,9 @@
   {
     "context": "Editor && vim_mode == visual && !menu",
     "bindings": {
-      "space /": "editor::ToggleComments"
+      "space /": "editor::ToggleComments",
+      "<": "editor::Outdent",
+      ">": "editor::Indent"
     }
   },
   {
