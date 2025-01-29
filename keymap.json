@@ -23,7 +23,7 @@
       "shift-left": "pane::ActivatePrevItem",
 
       "g d": "editor::GoToDefinition",
-      "space D": "editor::GoToTypeDefinition",
+      "g D": "editor::GoToTypeDefinition",
       "g r": "editor::FindAllReferences",
       "g I": "editor::GoToImplementation",
 
@@ -55,7 +55,13 @@
     }
   },
   {
-    "context": "Editor && !ProjectPanel",
+    "context": "Editor && vim_mode == visual && !menu",
+    "bindings": {
+      "space /": "editor::ToggleComments"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal  && !ProjectPanel && !menu",
 
     "bindings": {
       "space e": "workspace::ToggleLeftDock"
@@ -65,7 +71,8 @@
     "context": "ProjectPanel",
 
     "bindings": {
-      "space e": ["workspace::SendKeystrokes", "cmd-b"],
+      // "space e": ["workspace::SendKeystrokes", "cmd-b"],
+      "space e": "workspace::ToggleLeftDock",
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-right": ["workspace::ActivatePaneInDirection", "Right"],
       "shift-right": ["workspace::ActivatePaneInDirection", "Right"],
