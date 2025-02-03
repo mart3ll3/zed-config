@@ -45,8 +45,9 @@
       "space d": "diagnostics::Deploy",
 
       "space s f": "file_finder::Toggle",
-      "space s o": "workspace::Open",
 
+      "space s o": "workspace::Open",
+      // "shift-y": ["workspace::SendKeystrokes", "y $"]
       "space o": "outline::Toggle",
       "space s g": "pane::DeploySearch",
       "space b u": ["pane::CloseInactiveItems", { "close_pinned": false }],

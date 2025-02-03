@@ -58,8 +58,8 @@
     "scrollbar.thumb.border": null,
     "scrollbar.track.background": null,
     "scrollbar.track.border": null,
-    // "editor.foreground": "#D4D4D4",
-    "editor.foreground": "#DED47E",
+    "editor.foreground": "#D4D4D4",
+    // "editor.foreground": "#DED47E",
     "editor.background": null,
     "editor.gutter.background": null,
     "editor.subheader.background": null,
@@ -161,7 +161,7 @@
     "players": [],
     "syntax": {
       "attribute": {
-        "color": "#DED47E",
+        "color": "#D5D8E0",
         "background_color": null,
         "font_style": null,
         "font_weight": null
@@ -317,7 +317,7 @@
         "font_weight": null
       },
       "type": {
-        "color": "#F0D8FF",
+        "color": "#FFB3DE",
         "background_color": null,
         "font_style": null,
         "font_weight": null
@@ -329,7 +329,7 @@
         "font_weight": null
       },
       "variable.special": {
-        "color": "#DED47E",
+        "color": "#D4D4D4",
         "background_color": null,
         "font_style": null,
         "font_weight": null
