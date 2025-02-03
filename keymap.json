@@ -87,11 +87,16 @@
     // Vim: File Tree ("ProjectPanel") actions
     "context": "ProjectPanel && not_editing",
     "bindings": {
+      "enter": "project_panel::OpenPermanent",
+      "o": "project_panel::OpenPermanent",
+      "shift-g": "menu::SelectLast",
+      "g g": "menu::SelectFirst",
+      // "/": "project_panel::NewSearchInDirectory",
+      ":": "command_palette::Toggle",
       "h": "project_panel::CollapseSelectedEntry",
       "l": "project_panel::ExpandSelectedEntry",
       "j": "menu::SelectNext",
       "k": "menu::SelectPrev",
-      "o": "menu::Confirm",
       "r": "project_panel::Rename",
       "z c": "project_panel::CollapseSelectedEntry",
       "z o": "project_panel::ExpandSelectedEntry",
