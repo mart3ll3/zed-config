@@ -227,7 +227,7 @@
         "font_weight": null
       },
       "operator": {
-        "color": "#D5D8E0",
+        "color": "#B38CFF",
         "background_color": null,
         "font_style": null,
         "font_weight": null
@@ -329,7 +329,13 @@
         "font_weight": null
       },
       "variable.special": {
-        "color": "#D4D4D4",
+        "color": "#DED47E",
+        "background_color": null,
+        "font_style": null,
+        "font_weight": null
+      },
+      "variable.member": {
+        "color": "#DED47E",
         "background_color": null,
         "font_style": null,
         "font_weight": null
