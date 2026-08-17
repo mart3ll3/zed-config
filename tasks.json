@@ -78,5 +78,20 @@
     "show_command": false,
     "allow_concurrent_runs": true,
     "use_new_terminal": true
+  },
+  {
+    "label": "Oil File Browser",
+    "command": "nvim",
+    "args": ["$ZED_WORKTREE_ROOT"],
+    "env": {
+      "NVIM_APPNAME": "nvim-oil"
+    },
+    "hide": "always",
+    "reveal_target": "center",
+    "show_summary": false,
+    "show_command": false,
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true
   }
+
 ]
