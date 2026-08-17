@@ -92,6 +92,19 @@
     "show_command": false,
     "allow_concurrent_runs": true,
     "use_new_terminal": true
+  },
+  {
+    "label": "Television Text Search",
+    "command": "selection=$(tv text --exact --keybindings 'enter=\"confirm_selection\"') || exit 0; [ -z \"$selection\" ] || zed \"$selection\"",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "shell": {
+      "program": "sh"
+    },
+    "reveal": "always",
+    "hide": "on_success",
+    "allow_concurrent_runs": false,
+    "use_new_terminal": true
   }
+
 
 ]
