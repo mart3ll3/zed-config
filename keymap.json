@@ -89,7 +89,11 @@
       "space s o": "workspace::Open",
       // "shift-y": ["workspace::SendKeystrokes", "y $"]
       "space o": "outline::Toggle",
-      "space s g": "pane::DeploySearch",
+      // "space s g": "pane::DeploySearch",
+      "space s g": [
+            "task::Spawn",
+            { "task_name": "Television Text Search" }
+          ],
       "space b u": ["pane::CloseInactiveItems", { "close_pinned": false }],
       "space b a": ["pane::CloseAllItems", { "close_pinned": false }],
 
@@ -110,7 +114,13 @@
   {
     "context": "Editor && vim_mode == normal  && !ProjectPanel && !menu",
     "bindings": {
-      "space e": "workspace::ToggleLeftDock",
+      "space e": [
+        "task::Spawn",
+        {
+          "task_name": "Oil File Browser",
+          "reveal_target": "center"
+        }
+      ],
       "alt-t": "workspace::ToggleLeftDock"
     }
   },
@@ -270,20 +280,6 @@
     }
   },
   {
-    "context": "!Picker && !menu",
-    "bindings": {
-      "alt-left": "projects::OpenRecent",
-      "alt-right": "projects::OpenRecent"
-    }
-  },
-  {
-    "context": "Picker || menu",
-    "bindings": {
-      "alt-left": "menu::SelectPrevious",
-      "alt-right": "menu::SelectNext"
-    }
-  },
-  {
     "context": "ThreadSwitcher",
     "use_key_equivalents": true,
     "bindings": {
@@ -291,6 +287,27 @@
       "ctrl-alt-right": "menu::SelectNext"
       // "ctrl-alt-right": "agents_sidebar::ToggleThreadSwitcher",
       // "ctrl-alt-left": ["agents_sidebar::ToggleThreadSwitcher", { "select_last": true }]
+    }
+  },
+  {
+    "context": "Editor && !Picker && !menu",
+    "bindings": {
+      "alt-left": "projects::OpenRecent",
+      "alt-right": "projects::OpenRecent"
+    }
+  },
+  {
+    "context": "!Editor && !Picker && !menu",
+    "bindings": {
+      "alt-left": "projects::OpenRecent",
+      "alt-right": "projects::OpenRecent"
+    }
+  },
+  {
+    "context": "(Picker > Editor) || Picker || menu",
+    "bindings": {
+      "alt-left": "menu::SelectPrevious",
+      "alt-right": "menu::SelectNext"
     }
   }
 ]
