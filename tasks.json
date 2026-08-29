@@ -82,7 +82,7 @@
   {
     "label": "Oil File Browser",
     "command": "nvim",
-    "args": ["$ZED_WORKTREE_ROOT"],
+    "args": ["$ZED_DIRNAME"],
     "env": {
       "NVIM_APPNAME": "nvim-oil"
     },
@@ -105,6 +105,4 @@
     "allow_concurrent_runs": false,
     "use_new_terminal": true
   }
-
-
 ]
