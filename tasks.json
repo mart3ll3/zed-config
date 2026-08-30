@@ -60,13 +60,6 @@
     // "hooks": ["create_worktree"]
   },
   {
-    "label": "Television File Finder",
-    "command": "zed \"$(tv files)\"",
-    "hide": "always",
-    "allow_concurrent_runs": true,
-    "use_new_terminal": true
-  },
-  {
     "label": "LazyGit",
     "command": "lazygit",
     "shell": {
@@ -94,15 +87,40 @@
     "use_new_terminal": true
   },
   {
-    "label": "Television Text Search",
-    "command": "selection=$(tv text --exact --keybindings 'enter=\"confirm_selection\"') || exit 0; [ -z \"$selection\" ] || zed \"$selection\"",
-    "cwd": "$ZED_WORKTREE_ROOT",
-    "shell": {
-      "program": "sh"
-    },
-    "reveal": "always",
-    "hide": "on_success",
-    "allow_concurrent_runs": false,
+    "label": "Television File Finder",
+    "command": "zed \"$(tv files)\"",
+    "hide": "always",
+    "allow_concurrent_runs": true,
     "use_new_terminal": true
+  },
+// {
+//   "label": "Television Text Search",
+//   "command": "raw=$(tv --keybindings 'enter=\"confirm_selection\"' text) && [ -n \"$raw\" ] && result=$(echo \"$raw\" | cut -d: -f1,2) && zed \"$result\"; exit",
+//   "cwd": "$ZED_WORKTREE_ROOT",
+//   "reveal": "no_focus",
+//   "hide": "always",
+//   "allow_concurrent_runs": false,
+//   "use_new_terminal": true,
+//   "shell": {
+//     "with_arguments": {
+//       "program": "/bin/bash",
+//       "args": ["--noprofile", "--norc", "-c"]
+//     }
+//   }
+// }
+{
+  "label": "Television Text Search",
+  "command": "raw=$(tv --keybindings 'enter=\"confirm_selection\"' text) && [ -n \"$raw\" ] && result=$(echo \"$raw\" | cut -d: -f1,2) && zed \"$result\"; sleep 0.3; osascript -e 'tell application \"System Events\" to keystroke \"t\" using control down'; exit",
+  "cwd": "$ZED_WORKTREE_ROOT",
+  "reveal": "always",
+  "hide": "always",
+  "allow_concurrent_runs": false,
+  "use_new_terminal": true,
+  "shell": {
+    "with_arguments": {
+      "program": "/bin/bash",
+      "args": ["--noprofile", "--norc", "-c"]
+    }
   }
+}
 ]
