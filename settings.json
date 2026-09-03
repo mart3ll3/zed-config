@@ -96,7 +96,28 @@
       "th": "theme_selector::Toggle",
       "gs": "git_panel::Toggle",
       "km": "zed::OpenKeymap",
-    }
+    }//,
+    // "languages": {
+    //     "XML": {
+    //       "formatter": {
+    //         "external": {
+    //           "command": "C:/Users/JurajRajnoha/scoop/apps/nodejs/current/bin/prettier.cmd",
+    //           "arguments": [
+    //             "--plugin=C:/Users/JurajRajnoha/scoop/apps/nodejs/current/bin/node_modules/@prettier/plugin-xml/src/plugin.js",
+    //             "--stdin-filepath",
+    //             "{buffer_path}",
+    //             "--tab-width", "2",
+    //                         "--print-width", "120",
+    //                         "--xml-whitespace-sensitivity", "ignore",
+    //                         "--xml-self-closing-space"
+    //           ]
+    //         }
+    //       },
+    //       "format_on_save": "off"
+    //     }
+    //   }
+
+
   
   
 }
