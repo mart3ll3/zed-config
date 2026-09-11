@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "markdown_preview": {
+    "limit_content_width": false
+  },
   "colorize_brackets": true,
   "auto_update": false,
   "outline_panel": {
@@ -22,18 +25,10 @@
     "provider": "copilot"
   },
   "agent_servers": {
-    "opencode": {
-      "favorite_config_option_values": {
-        "model": [
-          "lmstudio/google/gemma-4-26b-a4b"
-        ]
-      },
-      "type": "registry"
-    },
     "omp": {
       "default_config_options": {
-        "thinking": "high",
-        "model": "openai-codex/gpt-5.6-sol"
+        "thinking": "auto",
+        "model": "github-copilot/gemini-3.7-flash"
       },
       "type": "custom",
       "command": "omp",
@@ -44,25 +39,7 @@
   "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
   "agent": {
     "dock": "left",
-    "default_model": {
-      "enable_thinking": true,
-      "provider": "google",
-      "model": "gemini-2.5-flash"
-    },
     "model_parameters": []
-  },
-  "language_models": {
-    "ollama": {
-      "api_url": "http://localhost:11434",
-      "low_speed_timeout_in_seconds": 120,
-      "available_models": [
-        {
-          "name": "qwen2.5",
-          "display_name": "qwen 2.5 coder 8K",
-          "max_tokens": 8192
-        }
-      ]
-    }
   },
   "theme": "Dracula Solid",
   "base_keymap": "JetBrains",
@@ -73,17 +50,19 @@
     "custom": 1.4
   },
   "ui_font_size": 17,
-  "buffer_font_size": 16,
+  "buffer_font_size": 15,
   "buffer_font_family": "MonoLisa Nerd Font Mono",
   "format_on_save": "off",
   "soft_wrap" : "editor_width",
   "remove_trailing_whitespace_on_save": false,
+  "cli_default_open_behavior": "existing_window",
   "formatter": null,
   // "formatter": "prettier",
   "project_panel": {
     // "indent_size": 11,
     "dock": "right",
-    "auto_fold_dirs": false
+    "auto_fold_dirs": false,
+    "default_width": 420
   },
   "vim": {
     "use_system_clipboard": "never"
@@ -96,28 +75,25 @@
       "th": "theme_selector::Toggle",
       "gs": "git_panel::Toggle",
       "km": "zed::OpenKeymap",
-    }//,
-    // "languages": {
-    //     "XML": {
-    //       "formatter": {
-    //         "external": {
-    //           "command": "C:/Users/JurajRajnoha/scoop/apps/nodejs/current/bin/prettier.cmd",
-    //           "arguments": [
-    //             "--plugin=C:/Users/JurajRajnoha/scoop/apps/nodejs/current/bin/node_modules/@prettier/plugin-xml/src/plugin.js",
-    //             "--stdin-filepath",
-    //             "{buffer_path}",
-    //             "--tab-width", "2",
-    //                         "--print-width", "120",
-    //                         "--xml-whitespace-sensitivity", "ignore",
-    //                         "--xml-self-closing-space"
-    //           ]
-    //         }
-    //       },
-    //       "format_on_save": "off"
-    //     }
-    //   }
-
-
-  
+    },
+    "languages": {
+        "XML": {
+          "formatter": {
+            "external": {
+              "command": "C:/Users/JurajRajnoha/scoop/apps/nodejs/current/bin/prettier.cmd",
+              "arguments": [
+                "--plugin=C:/Users/JurajRajnoha/scoop/apps/nodejs/current/bin/node_modules/@prettier/plugin-xml/src/plugin.js",
+                "--stdin-filepath",
+                "{buffer_path}",
+                "--tab-width", "2",
+                            "--print-width", "120",
+                            "--xml-whitespace-sensitivity", "ignore",
+                            "--xml-self-closing-space"
+              ]
+            }
+          },
+          "format_on_save": "off"
+        }
+      }
   
 }
