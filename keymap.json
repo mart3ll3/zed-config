@@ -7,7 +7,13 @@
       "ctrl-y": "editor::AcceptEditPrediction"
     }
   },
-
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "enter": "editor::Newline",
+      "tab": "editor::ConfirmCompletion"
+    }
+  },
   {
     "context": "VimControl || !Editor && !Terminal",
     "bindings": {
@@ -64,6 +70,10 @@
           { "task_name": "LazyGit", "reveal_target": "center" }
       ],
 
+      "space g d": [
+        "task::Spawn",
+          { "task_name": "Hunk Diff", "reveal_target": "center" }
+      ],
       "space |": "pane::SplitRight",
 
       "space h": "pane::SplitDown",
@@ -80,7 +90,7 @@
       "space d": "diagnostics::Deploy",
 
       "space s f": "file_finder::Toggle",
-      "space s f": 
+      "alt-f": 
       [ // Or `ctrl-p`
             "task::Spawn",
             { "task_name": "Television File Finder", "reveal_target": "center" },
@@ -89,8 +99,8 @@
       "space s o": "workspace::Open",
       // "shift-y": ["workspace::SendKeystrokes", "y $"]
       "space o": "outline::Toggle",
-      // "space s g": "pane::DeploySearch",
-      "space s g": [
+      "space s g": "pane::DeploySearch",
+      "alt-s": [
             "task::Spawn",
             { "task_name": "Television Text Search" }
           ],
@@ -258,6 +268,8 @@
   },
   {
     "bindings": {
+      "shift-right": "pane::ActivateNextItem",
+      "shift-left": "pane::ActivatePreviousItem",
       "ctrl-q": ["pane::CloseActiveItem", { "close_pinned": false }],
       "ctrl-t": "workspace::ToggleBottomDock",
       "alt-a": "multi_workspace::ToggleWorkspaceSidebar",
@@ -308,6 +320,12 @@
     "bindings": {
       "alt-left": "menu::SelectPrevious",
       "alt-right": "menu::SelectNext"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction && edit_prediction_mode == eager && !showing_completions",
+    "unbind": {
+      "tab": "editor::AcceptEditPrediction"
     }
   }
 ]
