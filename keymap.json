@@ -281,7 +281,17 @@
       "ctrl-alt-left": [
         "agents_sidebar::ToggleThreadSwitcher",
         { "select_last": true }
-      ]
+      ],
+            "alt-0": null,
+            "alt-1": null,
+            "alt-2": null,
+            "alt-3": null,
+            "alt-4": null,
+            "alt-5": null,
+            "alt-6": null,
+            "alt-7": null,
+            "alt-8": null,
+            "alt-9": null
     }
   },
   {
