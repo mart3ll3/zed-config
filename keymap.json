@@ -138,6 +138,9 @@
     "context": "ProjectPanel",
     "bindings": {
       // "space e": ["workspace::SendKeystrokes", "cmd-b"],
+      // 
+      "alt-left": "projects::OpenRecent",
+      "alt-right": "projects::OpenRecent",
       "space e": "workspace::ToggleLeftDock",
       "alt-t": "workspace::ToggleLeftDock",
 
@@ -326,7 +329,7 @@
     }
   },
   {
-    "context": "(Picker > Editor) || Picker || menu",
+    "context": "((Picker > Editor) || Picker || menu) && !ProjectPanel",
     "bindings": {
       "alt-left": "menu::SelectPrevious",
       "alt-right": "menu::SelectNext"
