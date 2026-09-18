@@ -179,7 +179,7 @@
       "shift-a": "project_panel::NewDirectory",
       "shift-o": "project_panel::NewDirectory",
       "shift-y": "project_panel::CopyRelativePath",
-      "g y": "project_panel::CopyPath",
+      "g y": "workspace::CopyRelativePath",
       "/": "file_finder::Toggle",
       "ctrl-t": "workspace::ToggleBottomDock",
       "ctrl-d": [
@@ -207,8 +207,9 @@
     "bindings": {
       "alt-f4": "zed::Quit",
       "ctrl-j": null,
-      "alt-1": "project_panel::ToggleFocus",
+      // "alt-1": "project_panel::ToggleFocus",
       "alt-e": "project_panel::ToggleFocus",
+      "alt-n": "editor::ToggleFocus",
       "alt-g": "git_panel::Toggle",
       "alt-o": "outline_panel::Toggle",
       "shift-right": "workspace::ActivatePaneRight",
