@@ -155,6 +155,9 @@
     // Vim: File Tree ("ProjectPanel") actions
     "context": "ProjectPanel && not_editing",
     "bindings": {
+      "alt-e": "workspace::ToggleRightDock",
+      "alt-t": "agent::ToggleFocus",
+      "alt-n": "editor::ToggleFocus",
       "enter": "project_panel::OpenPermanent",
       // "o": "project_panel::OpenPermanent",
       "shift-g": "menu::SelectLast",
@@ -240,6 +243,10 @@
   {
     "context": "Terminal",
     "bindings": {
+      "alt-t": "workspace::ToggleLeftDock",
+      "alt-e": "project_panel::ToggleFocus",
+      "alt-n": "editor::ToggleFocus",
+      
       "ctrl-t": "workspace::ToggleBottomDock",
       "ctrl-h": "pane::ActivatePreviousItem",
       "ctrl-left": "pane::ActivatePreviousItem",
@@ -279,7 +286,7 @@
       "alt-a": "multi_workspace::ToggleWorkspaceSidebar",
       "alt-w": "git::Worktree",
       "alt-b": "git::Branch",
-      "alt-t": "workspace::ToggleLeftDock",
+      // "alt-t": "workspace::ToggleLeftDock",
       // "ctrl-g": "git_panel::ToggleFocus",
       "ctrl-alt-right": "agents_sidebar::ToggleThreadSwitcher",
       "ctrl-alt-left": [
@@ -301,8 +308,28 @@
   {
     "context": "AcpThread > Editor",
     "bindings": {
+      "alt-t": "workspace::ToggleLeftDock",
+      "alt-e": "project_panel::ToggleFocus",
+      "alt-n": "editor::ToggleFocus",
+      
       "ctrl-enter": "agent::Chat",
       "enter": "editor::Newline"
+    }
+  },
+  {
+  "context": "AgentPanel",
+    "bindings": {
+      "alt-t": "workspace::ToggleLeftDock",
+      "alt-e": "project_panel::ToggleFocus",
+      "alt-n": "editor::ToggleFocus"
+    }
+  },
+  {
+  "context": "ThreadsSidebar",
+    "bindings": {
+      "alt-t": "agent::ToggleFocus",
+      "alt-e": "project_panel::ToggleFocus",
+      "alt-n": "editor::ToggleFocus"
     }
   },
   {
@@ -319,7 +346,11 @@
     "context": "Editor && !Picker && !menu",
     "bindings": {
       "alt-left": "projects::OpenRecent",
-      "alt-right": "projects::OpenRecent"
+      "alt-right": "projects::OpenRecent",
+      
+      "alt-t": "agent::ToggleFocus",
+      "alt-e": "project_panel::ToggleFocus",
+      "alt-n": "editor::ToggleFocus"
     }
   },
   {
