@@ -306,17 +306,6 @@
     }
   },
   {
-    "context": "AcpThread > Editor",
-    "bindings": {
-      "alt-t": "workspace::ToggleLeftDock",
-      "alt-e": "project_panel::ToggleFocus",
-      "alt-n": "editor::ToggleFocus",
-      
-      "ctrl-enter": "agent::Chat",
-      "enter": "editor::Newline"
-    }
-  },
-  {
   "context": "AgentPanel",
     "bindings": {
       "alt-t": "workspace::ToggleLeftDock",
@@ -359,6 +348,17 @@
       "alt-t": "agent::ToggleFocus",
       "alt-e": "project_panel::ToggleFocus",
       "alt-n": "editor::ToggleFocus"
+    }
+  },
+  {
+    "context": "AcpThread > Editor",
+    "bindings": {
+      "alt-t": "workspace::ToggleLeftDock",
+      "alt-e": "project_panel::ToggleFocus",
+      "alt-n": "editor::ToggleFocus",
+      
+      "ctrl-enter": "agent::Chat",
+      "enter": "editor::Newline"
     }
   },
   {
