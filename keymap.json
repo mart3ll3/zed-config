@@ -283,7 +283,7 @@
       "shift-left": "pane::ActivatePreviousItem",
       "ctrl-q": ["pane::CloseActiveItem", { "close_pinned": false }],
       "ctrl-t": "workspace::ToggleBottomDock",
-      "alt-a": "multi_workspace::ToggleWorkspaceSidebar",
+      "alt-a": "multi_workspace::FocusWorkspaceSidebar",
       "alt-w": "git::Worktree",
       "alt-b": "git::Branch",
       // "alt-t": "workspace::ToggleLeftDock",
@@ -327,9 +327,17 @@
   {
   "context": "ThreadsSidebar",
     "bindings": {
+      "alt-a": "multi_workspace::ToggleWorkspaceSidebar",
       "alt-t": "agent::ToggleFocus",
       "alt-e": "project_panel::ToggleFocus",
       "alt-n": "editor::ToggleFocus"
+    }
+  },
+  {
+    "context": "ThreadsSidebar > Editor",
+    "use_key_equivalents": true,
+    "bindings": {
+      "alt-a": "multi_workspace::ToggleWorkspaceSidebar"
     }
   },
   {
